@@ -4,35 +4,84 @@
 <meta charset="UTF-8">
 <title>Bihar se Bihar Tak</title>
 <style>
-body{
-font-family: Arial;
-background:#f4f4f4;
-text-align:center;
-padding:20px;
+/* ===== General ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
 }
-img{
-width:200px;
-border-radius:10px;
+
+/* ===== Header ===== */
+header {
+    background: #d60000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
 }
-h1{color:#d60000;}
+header h1 { margin: 0; font-size: 36px; }
+header p { margin: 5px 0 0 0; font-size: 18px; }
+
+/* ===== Main ===== */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+main img {
+    width: 200px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+main a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    background: #ff0000;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* ===== News Section ===== */
+.news {
+    margin-top: 30px;
+}
+.news h2 {
+    color: #d60000;
+    border-bottom: 2px solid #d60000;
+    padding-bottom: 5px;
+}
+.news article {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.news article h3 { margin: 5px 0; }
+.news article p { margin: 5px 0; }
+
+/* ===== Footer ===== */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
 </style>
 </head>
 <body>
 
-<h1>Bihar se Bihar Tak</h1>
-<p><b>बिहार की आवाज आशुतोष गौतम के साथ</b></p>
-<img src="photo.jpg" width="200" style="border-radius:10px;">
-<img src="photo.jpg">
+<header>
+    <h1>Bihar se Bihar Tak</h1>
+    <p>बिहार की आवाज – आशुतोष गौतम के साथ</p>
+</header>
 
-<p>
-<a href="https://www.youtube.com/@biharsebiharta" target="_blank">
-YouTube Channel देखें
-</a>
-</p>
-
-</body>
-  <main>
-    <img src="photo.jpg" width="200" style="border-radius:10px;">
+<main>
+    <img src="photo.jpg" alt="Bihar se Bihar Tak">
     <p>हम बिहार की ज़मीनी खबरें, ताज़ा अपडेट और जनता की आवाज़ आपको पहुँचाते हैं।</p>
 
     <a href="https://www.youtube.com/@biharsebiharta" target="_blank">
@@ -48,10 +97,16 @@ YouTube Channel देखें
         </article>
 
         <article>
-            <h3>समाचार</h3>
-            <p>लोकल न्यूज़ अपडेट: सड़क परियोजना पूरी हुई।</p>
+            <h3>लोकल न्यूज़</h3>
+            <p>सड़क परियोजना पूरी हुई और जनता को लाभ मिला।</p>
         </article>
 
     </section>
-  </main>
+</main>
+
+<footer>
+    © 2026 Bihar se Bihar Tak. All Rights Reserved.
+</footer>
+
+</body>
 </html>
