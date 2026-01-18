@@ -2,8 +2,18 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
+
+<!-- ✅ Mobile View -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>BIHAR SE BIHAR TAK</title>
+
 <style>
+/* ===== Smooth Scroll ===== */
+html {
+    scroll-behavior: smooth;
+}
+
 /* ===== General ===== */
 body {
     font-family: Arial, sans-serif;
@@ -24,12 +34,10 @@ header {
 header h1 {
     margin: 0;
     font-size: 38px;
-    letter-spacing: 1px;
 }
 header p {
     margin-top: 8px;
     font-size: 18px;
-    opacity: 0.95;
 }
 
 /* ===== Main ===== */
@@ -60,11 +68,10 @@ main a {
     padding: 12px 22px;
     border-radius: 30px;
     font-weight: bold;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: 0.3s;
 }
 main a:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
 }
 
 /* ===== News Section ===== */
@@ -87,7 +94,6 @@ main a:hover {
 }
 .news article h3 {
     margin: 0 0 8px 0;
-    color: #111;
 }
 .news article p {
     margin: 0;
@@ -96,9 +102,11 @@ main a:hover {
 
 /* ===== Video ===== */
 iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
     border-radius: 12px;
     margin-top: 10px;
-    width: 100%;
+    border: none;
 }
 
 /* ===== Footer ===== */
@@ -110,8 +118,41 @@ footer {
     margin-top: 40px;
     font-size: 14px;
 }
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    main img {
+        width: 150px;
+    }
+
+    main a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    iframe {
+        aspect-ratio: 16/9;
+    }
+}
 </style>
 </head>
+
 <body>
 
 <header>
@@ -120,15 +161,17 @@ footer {
 </header>
 
 <main>
-    <img src="photo.jpg" alt="Bihar se Bihar Tak">
-    <p>हम बिहार के जनता की आवाज़ आप तक पहुँचाते हैं।</p>
-<a href="https://www.youtube.com/@biharsebiharta" target="_blank" style="background:#FF0000; color:white; padding:10px 20px; border-radius:5px; text-decoration:none;">
-    YouTube Channel देखें
-</a>
 
-<a href="https://www.instagram.com/biharsebihartak5?igsh=MTM3eWtoODF2YmtuYg==" target="_blank" style="background:#E4405F; color:white; padding:10px 20px; border-radius:5px; text-decoration:none; margin-left:10px;">
-    Instagram देखें
-</a>
+    <img src="photo.jpg" alt="Bihar se Bihar Tak">
+    <p>हम बिहार की जनता की आवाज़ आप तक पहुँचाते हैं।</p>
+
+    <a href="https://www.youtube.com/@biharsebiharta" target="_blank" style="background:#FF0000;">
+        YouTube Channel देखें
+    </a>
+
+    <a href="https://www.instagram.com/biharsebihartak5" target="_blank" style="background:#E4405F;">
+        Instagram देखें
+    </a>
 
     <section class="news">
         <h2>Latest News</h2>
@@ -142,50 +185,38 @@ footer {
             <h3>बिहार न्यूज़</h3>
             <p>सीधे सरकार से सवाल</p>
         </article>
-
     </section>
-    <article>
-    <article>
-    <h3>Latest News Video</h3>
-    <p>देखिए ताज़ा खबरें इस वीडियो में:</p>
-    <iframe width="100%" height="400" 
-        src="https://www.youtube.com/embed/Ezv_3PW1hH4" 
-        title="Latest News Video"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-    </iframe>
-    </article><section class="news">
-    <h2>Latest Shorts</h2>
 
     <article>
-        <h3>Shorts </h3>
-        <iframe width="100%" height="315"
-        src="https://www.youtube.com/embed/AEeFe6qNQeU"
-        frameborder="0"
-        allowfullscreen></iframe>
+        <h3>Latest News Video</h3>
+        <p>देखिए ताज़ा खबरें इस वीडियो में:</p>
+
+        <iframe 
+          src="https://www.youtube.com/embed/Ezv_3PW1hH4"
+          allowfullscreen>
+        </iframe>
     </article>
 
-    <article>
-        <h3>Shorts </h3>
-        <iframe width="100%" height="315"
-        src="https://www.youtube.com/embed/2Hm_EmE4FBY"
-        frameborder="0"
-        allowfullscreen></iframe>
-    </article>
+    <section class="news">
+        <h2>Latest Shorts</h2>
 
-    <article>
-        <h3>Shorts </h3>
-        <iframe width="100%" height="315"
-        src="https://www.youtube.com/embed/8vjUL6Zn82A"
-        frameborder="0"
-        allowfullscreen></iframe>
-    </article>
+        <article>
+            <iframe src="https://www.youtube.com/embed/AEeFe6qNQeU" allowfullscreen></iframe>
+        </article>
+
+        <article>
+            <iframe src="https://www.youtube.com/embed/2Hm_EmE4FBY" allowfullscreen></iframe>
+        </article>
+
+        <article>
+            <iframe src="https://www.youtube.com/embed/8vjUL6Zn82A" allowfullscreen></iframe>
+        </article>
     </section>
+
 </main>
 
 <footer>
-    © 2026 Bihar se Bihar Tak. All Rights Reserved.
+    © 2026 Bihar se Bihar Tak | All Rights Reserved
 </footer>
 
 </body>
