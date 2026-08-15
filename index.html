@@ -3,13 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Bihar se Bihar Tak | Aashutosh Gautam</title>
 
-<meta name="description" content="Bihar se Bihar Tak is a digital news platform. Founder & Reporter: Aashutosh Gautam">
+<meta name="description"
+content="Bihar se Bihar Tak is a digital news platform. Founder & Reporter: Aashutosh Gautam">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -17,16 +21,17 @@ box-sizing:border-box;
 }
 
 body{
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial,Helvetica,sans-serif;
 background:#111;
 color:#fff;
 }
 
+/* HEADER */
 header{
 background:linear-gradient(45deg,#b30000,#ff0000);
 padding:25px;
 text-align:center;
-box-shadow:0 4px 15px rgba(0,0,0,0.5);
+box-shadow:0 4px 15px rgba(0,0,0,.5);
 }
 
 header h1{
@@ -39,6 +44,7 @@ margin-top:8px;
 font-size:18px;
 }
 
+/* NAVIGATION */
 nav{
 background:#000;
 padding:14px;
@@ -54,16 +60,22 @@ color:#fff;
 text-decoration:none;
 margin:0 15px;
 font-weight:bold;
-transition:0.3s;
+transition:.3s;
 }
 
 nav a:hover{
 color:#ff0000;
 }
 
+/* HERO */
 .hero{
-background:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c') center/cover;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1504711434969-e33886168f5c')
+center/cover;
+
 height:280px;
+
 display:flex;
 align-items:center;
 justify-content:center;
@@ -71,18 +83,20 @@ text-align:center;
 }
 
 .hero h2{
-background:rgba(0,0,0,0.7);
+background:rgba(0,0,0,.75);
 padding:18px 28px;
 border-radius:12px;
 font-size:32px;
 }
 
+/* CONTAINER */
 .container{
 max-width:1150px;
 margin:auto;
 padding:20px;
 }
 
+/* PROFILE */
 .profile{
 text-align:center;
 margin:40px 0;
@@ -94,7 +108,7 @@ height:220px;
 object-fit:cover;
 border-radius:20px;
 border:4px solid #ff0000;
-box-shadow:0 0 20px rgba(255,0,0,0.4);
+box-shadow:0 0 20px rgba(255,0,0,.4);
 }
 
 .profile h2{
@@ -121,7 +135,7 @@ border-radius:10px;
 margin:5px;
 font-size:16px;
 text-decoration:none;
-transition:0.3s;
+transition:.3s;
 }
 
 .profile-social a:hover{
@@ -130,6 +144,7 @@ color:#fff;
 transform:scale(1.05);
 }
 
+/* SECTION */
 .section{
 margin-bottom:55px;
 }
@@ -142,31 +157,50 @@ color:#ff0000;
 font-size:28px;
 }
 
-.video-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:22px;
-}
-
-.video-card{
+/* LATEST VIDEO */
+.latest-video-card{
 background:#1a1a1a;
-padding:10px;
+padding:12px;
 border-radius:16px;
-box-shadow:0 0 10px rgba(0,0,0,0.4);
-transition:0.3s;
+box-shadow:0 0 18px rgba(255,0,0,.3);
 }
 
-.video-card:hover{
-transform:translateY(-5px);
-}
-
-iframe{
+.latest-video-card iframe{
 width:100%;
 aspect-ratio:16/9;
 border:none;
 border-radius:12px;
+display:block;
 }
 
+/* OTHER VIDEOS */
+.video-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+}
+
+.video-card{
+background:#1a1a1a;
+padding:8px;
+border-radius:12px;
+box-shadow:0 0 8px rgba(0,0,0,.4);
+transition:.3s;
+}
+
+.video-card:hover{
+transform:translateY(-4px);
+}
+
+.video-card iframe{
+width:100%;
+aspect-ratio:16/9;
+border:none;
+border-radius:9px;
+display:block;
+}
+
+/* HEADLINES */
 .news-box{
 background:#1a1a1a;
 padding:16px;
@@ -176,6 +210,7 @@ border-radius:12px;
 font-size:17px;
 }
 
+/* FOOTER */
 footer{
 background:#000;
 padding:22px;
@@ -185,6 +220,7 @@ color:#aaa;
 margin-top:40px;
 }
 
+/* MOBILE */
 @media(max-width:768px){
 
 header h1{
@@ -205,30 +241,66 @@ width:170px;
 height:170px;
 }
 
+.video-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+/* SMALL MOBILE */
+@media(max-width:450px){
+
+nav a{
+margin:0 7px;
+font-size:14px;
+}
+
+.section h2{
+font-size:23px;
+}
+
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
+
 <h1>BIHAR SE BIHAR TAK</h1>
+
 <p>Digital News Platform</p>
+
 </header>
 
+
+<!-- NAVIGATION -->
 <nav>
+
 <a href="#">Home</a>
+
 <a href="#">Latest News</a>
+
 <a href="#">Videos</a>
+
 <a href="#">Contact</a>
+
 </nav>
 
+
+<!-- HERO -->
 <div class="hero">
+
 <h2>बिहार की आवाज़ – सच के साथ</h2>
+
 </div>
+
 
 <div class="container">
 
+
+<!-- PROFILE -->
 <div class="profile">
 
 <img src="photo.jpg" alt="Aashutosh Gautam">
@@ -241,152 +313,292 @@ height:170px;
 Bihar se Bihar Tak is a digital news platform.
 </p>
 
+
 <div class="profile-social">
 
-<a href="https://youtube.com/@biharsebiharta" target="_blank">
-<i class="fab fa-youtube"></i> YouTube
+<a href="https://youtube.com/@biharsebiharta"
+target="_blank">
+
+<i class="fab fa-youtube"></i>
+YouTube
+
 </a>
 
-<a href="https://www.instagram.com/biharsebihartak5" target="_blank">
-<i class="fab fa-instagram"></i> Instagram
+
+<a href="https://www.instagram.com/biharsebihartak5"
+target="_blank">
+
+<i class="fab fa-instagram"></i>
+Instagram
+
 </a>
 
 </div>
+
 </div>
 
-<!-- 🔥 Latest Video -->
+
+<!-- 🔥 LATEST VIDEO -->
 <div class="section">
 
 <h2>🔥 Latest Video</h2>
 
-<div class="video-card">
-<iframe src="https://www.youtube.com/embed/LVLkCjbql0Y" allowfullscreen></iframe>
-</div>
+<div class="latest-video-card">
+
+<iframe
+src="https://www.youtube.com/embed/LVLkCjbql0Y"
+allowfullscreen>
+</iframe>
 
 </div>
 
-<!-- 📰 Other News Videos -->
+</div>
+
+
+<!-- 📰 OTHER NEWS VIDEOS -->
 <div class="section">
 
 <h2>📰 Other News Videos</h2>
-  
-  <div class="video-card">
-<iframe src="https://www.youtube.com/embed/EQUBkf1zib8" allowfullscreen></iframe>
-  </div>
-  
-  <div class="video-card">
-<iframe src="https://www.youtube.com/embed/PYQ5qvJdoHw" allowfullscreen></iframe>
-  </div>
-  
+
 <div class="video-grid">
 
+
+<!-- Video 1 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/hcWGqd84zp4" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/EQUBkf1zib8"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 2 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/VyJoFPl6guo" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/PYQ5qvJdoHw"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 3 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/LBg4l63TQCY" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/hcWGqd84zp4"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 4 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/ZsLLfH04kT8" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/VyJoFPl6guo"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 5 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/sOrHV14bW0A" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/LBg4l63TQCY"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 6 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/z6lta59eghU" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/ZsLLfH04kT8"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 7 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/D-O7tfoAvN4" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/sOrHV14bW0A"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 8 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/8Hl8kDBDJCY" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/z6lta59eghU"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 9 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/eaMMaiWDMUI" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/D-O7tfoAvN4"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 10 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/Icb03rWyQoc" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/8Hl8kDBDJCY"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 11 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/7Qn-BCTqVqk" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/eaMMaiWDMUI"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 12 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/PgoYrCvHkoo" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/Icb03rWyQoc"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 13 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/3KEXZwEIqss" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/7Qn-BCTqVqk"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 14 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/0rImeRFeyg0" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/PgoYrCvHkoo"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 15 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/SGihxmDPKbI" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/3KEXZwEIqss"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 16 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/z-RQsSAu4ak" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/0rImeRFeyg0"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 17 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/A0cgBbsvdAw" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/SGihxmDPKbI"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 18 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/xiSnWeFDxDk" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/z-RQsSAu4ak"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 19 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/Ezv_3PW1hH4" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/A0cgBbsvdAw"
+allowfullscreen>
+</iframe>
 </div>
 
+
+<!-- Video 20 -->
 <div class="video-card">
-<iframe src="https://www.youtube.com/embed/lxteAW94auo" allowfullscreen></iframe>
+<iframe
+src="https://www.youtube.com/embed/xiSnWeFDxDk"
+allowfullscreen>
+</iframe>
 </div>
+
+
+<!-- Video 21 -->
+<div class="video-card">
+<iframe
+src="https://www.youtube.com/embed/Ezv_3PW1hH4"
+allowfullscreen>
+</iframe>
+</div>
+
+
+<!-- Video 22 -->
+<div class="video-card">
+<iframe
+src="https://www.youtube.com/embed/lxteAW94auo"
+allowfullscreen>
+</iframe>
+</div>
+
 
 </div>
 </div>
 
-<!-- 🗞️ Headlines -->
+
+<!-- 🗞️ HEADLINES -->
 <div class="section">
 
 <h2>🗞️ Latest Headlines</h2>
+
 
 <div class="news-box">
 बिहार की जनता की आवाज़ अब और तेज़।
 </div>
 
+
 <div class="news-box">
 शिक्षा, रोजगार और राजनीति पर सीधी रिपोर्ट।
 </div>
+
 
 <div class="news-box">
 ज़मीनी हकीकत के साथ डिजिटल पत्रकारिता।
 </div>
 
-</div>
 
 </div>
 
+
+</div>
+
+
+<!-- FOOTER -->
 <footer>
+
 © 2026 Bihar se Bihar Tak | All Rights Reserved
+
 </footer>
+
 
 </body>
 </html>
